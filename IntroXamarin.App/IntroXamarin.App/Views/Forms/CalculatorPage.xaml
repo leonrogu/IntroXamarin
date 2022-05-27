@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculatorPage">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+            <StackLayout Margin="20,32" Spacing="0">
+                
+                <Frame BackgroundColor="Gray" CornerRadius="20">
+                    <Entry HorizontalTextAlignment="End" IsEnabled="False" x:Name="Visor" FontSize="30" />
+                </Frame>
+                
+                <Label></Label>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="1" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Uno" Grid.Row="0" Grid.Column="0" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="2" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Dos" Grid.Row="0" Grid.Column="1" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="3" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Tres" Grid.Row="0" Grid.Column="2" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="-" FontSize="50" CornerRadius="20" x:Name="Restar" Grid.Row="0" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="CapturarOperador"/>
+
+                    <Button Text="4" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Cuatro" Grid.Row="1" Grid.Column="0" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="5" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Cinco" Grid.Row="1" Grid.Column="1" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="6" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Seis" Grid.Row="1" Grid.Column="2" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="*" FontSize="50" CornerRadius="20" x:Name="Multiplicar" Grid.Row="1" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="CapturarOperador"/>
+
+                    <Button Text="7" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Siete" Grid.Row="2" Grid.Column="0" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="8" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Ocho" Grid.Row="2" Grid.Column="1" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="9" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Nueve" Grid.Row="2" Grid.Column="2" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="+" FontSize="50" CornerRadius="20" x:Name="Sumar" Grid.Row="2" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="CapturarOperador"/>
+
+                    <Button Text="." FontSize="50" TextColor="White" CornerRadius="20" x:Name="Punto" Grid.Row="3" Grid.Column="0" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="0" FontSize="50" TextColor="White" CornerRadius="20" x:Name="Cero" Grid.Row="3" Grid.Column="1" BackgroundColor="DarkBlue" Clicked="CapturarNumero"/>
+                    <Button Text="C" FontSize="50" TextColor="Black" CornerRadius="20" x:Name="Borrar" Grid.Row="3" Grid.Column="2" BackgroundColor="IndianRed" Clicked="CapturarBorrar"/>
+                    <Button Text="/" FontSize="50" CornerRadius="20" x:Name="Dividir" Grid.Row="3" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="CapturarOperador"/>
+
+                    <Button Text="=" FontSize="50" CornerRadius="20" x:Name="Igual" Grid.ColumnSpan="4" Grid.Row="4" 
+                            BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" Clicked="CapturarIgual"/>
+
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
